@@ -1,0 +1,5 @@
+<div>
+  <div>Posted by <%= tweet.user.email %></div>
+  <p><%= tweet.body %>
+  <div><%= link_to 'Retweet', retweet_tweet_path(tweet), method: :post if user_signed_in? && tweet.user_id != current_user.id %></div>
+</div>

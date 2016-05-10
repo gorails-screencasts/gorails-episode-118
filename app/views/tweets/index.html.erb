@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tweets</h1>
+
+<% @tweets.each do |tweet| %>
+  <hr />
+  <%= render partial: "tweets/#{tweet.tweet_type}", locals: {tweet: tweet} %>
+<% end %>
+
+<br>
+
+<%= link_to 'New Tweet', new_tweet_path %>
